@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;700&display=swap');
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  font-size: 62.5%;
+
+  font-family: 'Source Code Pro', monospace;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0 0 0 0.5rem;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  box-sizing: inherit;
+}
+
+.main {
+  .section {
+    height: 100vh;
+
+    padding: 5rem;
+  }
+
+  .introduction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #212128;
+    color: #fff;
+
+    &__title {
+      font-size: 5rem;
+    }
+
+    &__subtitle {
+      font-size: 2rem;
+    }
+
+    &__img {
+      width: 35vw;
+    }
+  }
+
+  .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #da431a;
+
+    &__img {
+      width: 60vw;
+    }
+  }
+
+  .features {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background: #f7f7f7;
+
+    &__img {
+      width: 35vw;
+
+      border-radius: 1.5rem;
+    }
+
+    &__content {
+      align-self: flex-start;
+
+      font-size: 1.6rem;
+    }
+
+    &__title {
+      font-size: 3rem;
+    }
+
+    &__list {
+      list-style: none;
+    }
+  }
+
+  .prices {
+    &__title {
+      font-size: 5rem;
+    }
+
+    &__subtitle {
+      font-size: 2.5rem;
+    }
+
+    &__row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__img {
+      height: 70vh;
+    }
+
+    &__variants {
+      .variant {
+        &__title {
+          font-size: 2rem;
+        }
+
+        &__description {
+          font-size: 1.3rem;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+
+  .join {
+    padding: 0;
+
+    &__title {
+      font-size: 5rem;
+    }
+
+    &__subtitle {
+      font-size: 2.5rem;
+    }
+
+    &__card {
+      height: 85vh;
+    }
+  }
+}
