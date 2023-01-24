@@ -1,0 +1,22 @@
+.main {
+  .introduction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #212128;
+    color: #fff;
+
+    &__title {
+      font-size: 5rem;
+    }
+
+    &__subtitle {
+      font-size: 2rem;
+    }
+
+    &__img {
+      width: 35vw;
+    }
+  }
+}

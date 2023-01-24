@@ -1,0 +1,34 @@
+.main {
+  .prices {
+    &__title {
+      font-size: 5rem;
+    }
+
+    &__subtitle {
+      font-size: 2.5rem;
+    }
+
+    &__row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__img {
+      height: 70vh;
+    }
+
+    &__variants {
+      .variant {
+        &__title {
+          font-size: 2rem;
+        }
+
+        &__description {
+          font-size: 1.3rem;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}

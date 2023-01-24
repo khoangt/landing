@@ -1,0 +1,13 @@
+.main {
+  .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #da431a;
+
+    &__img {
+      width: 60vw;
+    }
+  }
+}
