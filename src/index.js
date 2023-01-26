@@ -57,13 +57,25 @@ function initPage() {
     easing: 'easeInOutExpo'
   });
 
+  // Features
+
   const featuresSection = document.querySelector(".section__features");
 
   makeAnimation({
-    targets: ".text-animate",
-    scale: 2,
-    duration: 4000,
-  }, featuresSection, 100, 200);
+    targets: '.lines__left',
+    opacity: 1,
+    translateY: 0,
+    duration: 2000,
+    easing: 'easeInOutExpo',
+  }, featuresSection, 500, 350);
+
+  makeAnimation({
+    targets: '.lines__right',
+    opacity: 1,
+    translateY: 0,
+    duration: 2000,
+    easing: 'easeInOutExpo',
+  }, featuresSection, 500, 350);
 
   window.onscroll = function () {
     animations.forEach((animation) => {

@@ -1,5 +1,11 @@
 .main {
   .prices {
+    min-height: auto;
+    height: auto;
+
+    background: #282b30;
+    color: #fff;
+
     &__title {
       font-size: 5rem;
     }
@@ -8,18 +14,41 @@
       font-size: 2.5rem;
     }
 
-    &__row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
     &__img {
       height: 70vh;
     }
 
     &__variants {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2rem;
+
+      width: 100%;
+
+      margin-top: 2rem;
+
+      list-style: none;
+
       .variant {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+
+        border: 1px solid black;
+        border-radius: 5px;
+
+        width: 25%;
+        min-height: 20rem;
+
+        transition: transform .2s;
+
+        &:hover {
+          transform: scale(1.1);
+
+          cursor: pointer;
+        }
+
         &__title {
           font-size: 2rem;
         }
@@ -27,6 +56,48 @@
         &__description {
           font-size: 1.3rem;
           font-weight: 300;
+        }
+
+        &__button {
+          justify-content: flex-end;
+          align-self: flex-end;
+
+          padding: 0.5rem 1.5rem;
+
+          background-color: transparent;
+          border: 0.1rem solid black;
+
+          &:hover {
+            cursor: pointer;
+          }
+
+          &-link {
+            color: inherit;
+            text-decoration: none;
+          }
+        }
+
+        .price {
+          margin-bottom: 1rem;
+
+          font-weight: 500;
+
+          &__value {
+            font-size: 2rem;
+          }
+
+          &__currency {
+            font-size: 1.5rem;
+            font-weight: 700;
+          }
+
+          &__term {
+            font-size: 2rem;
+          }
+        }
+
+        &__privileges {
+          font-size: 1.3rem;
         }
       }
     }

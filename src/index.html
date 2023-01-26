@@ -37,14 +37,14 @@
         </ul>
       </section>
 
-      <section class="section section__info info">
-        <img draggable="false" class="info__img" src="assets/img/man2.jpg" alt="">
-      </section>
-
       <section class="section section__features features">
-        <img draggable="false" class="features__img" src="assets/img/defender.jpg" alt="">
+        <div class="features__img features__lines lines">
+          <img class="lines__left" src="assets/img/utils/line_left.jpg" alt="" style="opacity: 0; transform: translateY(-100px) scale(0.9);">
+          <img class="lines__img" src="assets/img/man2.jpg" alt="">
+          <img class="lines__right" src="assets/img/utils/line_right.jpg" alt="" style="opacity: 0; transform: translateY(100px) scale(0.9);">
+        </div>
         <div class="features__content">
-          <h2 class="features__title text-animate">Why Us?</h2>
+          <h2 class="features__title text-animate">Features</h2>
           <ul class="features__list">
             <li class="features__item feature">Local savings</li>
             <li class="features__item feature">200+ settings</li>
@@ -57,46 +57,59 @@
       <section class="section section__prices prices">
         <h2 class="prices__title">Pricing</h2>
 
-        <div class="prices__row">
-          <img draggable="false" class="prices__img" src="assets/img/download.jpg" alt="">
-
-          <div class="prices__content">
-            <ul class="prices__variants">
-              <li class="prices__variant variant">
-                <h3 class="variant__title">Free</h3>
-                <p class="variant__description">
-                  * 111
-                  * 222
-                  * 333
-                </p>
-              </li>
-              <li class="prices__variant variant">
-                <h3 class="variant__title">Paid 1</h3>
-                <p class="variant__description">
-                  * 111
-                  * 222
-                  * 333
-                </p>
-              </li>
-              <li class="prices__variant variant">
-                <h3 class="variant__title">Paid 2</h3>
-                <p class="variant__description">
-                  * 111
-                  * 222
-                  * 333
-                </p>
-              </li>
+        <ul class="prices__variants">
+          <li class="prices__variant variant">
+            <h3 class="variant__title">Trial</h3>
+            <div class="variant__price price">
+              <span class="price__value">Free</span>
+            </div>
+            <ul class="variant__privileges privileges">
+              <li class="privileges__item">2 profiles limit</li>
+              <li class="privileges__item">1 month for free</li>
             </ul>
-          </div>
-        </div>
+            <button class="variant__button">
+              <a href="#" class="variant__button-link">Start Trial</a>
+            </button>
+          </li>
+          <li class="prices__variant variant">
+            <h3 class="variant__title">Basic</h3>
+            <div class="variant__price price">
+              <span class="price__value">10</span>
+              <span class="price__currency">$</span>
+              <span class="price__term">/ month</span>
+            </div>
+            <ul class="variant__privileges privileges">
+              <li class="privileges__item">50 profiles limit</li>
+              <li class="privileges__item">Basic support</li>
+            </ul>
+            <button class="variant__button">
+              <a href="#" class="variant__button-link">Choose</a>
+            </button>
+          </li>
+          <li class="prices__variant variant">
+            <h3 class="variant__title">Pro</h3>
+            <div class="variant__price price">
+              <span class="price__value">20</span>
+              <span class="price__currency">$</span>
+              <span class="price__term">/ month</span>
+            </div>
+            <ul class="variant__privileges privileges">
+              <li class="privileges__item">200 profiles limit</li>
+              <li class="privileges__item">Priority support</li>
+            </ul>
+            <button class="variant__button">
+              <a href="#" class="variant__button-link">Choose</a>
+            </button>
+          </li>
+        </ul>
       </section>
 
       <section class="section section__join join">
+        <h2 class="join__title">Join Us</h2>
         <div
-          style="background: url('./assets/img/join.jpg') no-repeat center center; background-size: cover;"
-          class="join__card"
+          class="join__content"
+          style="background: url(./assets/img/join.jpg) no-repeat #282b30 bottom; background-size: contain"
         >
-          <h2 class="join__title">Join Us</h2>
         </div>
       </section>
     </div>
