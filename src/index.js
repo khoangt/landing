@@ -8,6 +8,13 @@ document.addEventListener('DOMContentLoaded', initPage);
 const apiBaseURL = 'http://localhost:3005/api/v1';
 
 function initPage() {
+  const joinButton = document.querySelector('.join__button');
+  if (joinButton) {
+    joinButton.addEventListener('click', () => {
+      window.open('https://lk.browser-profiles.com/auth/sign-up', '_blank');
+    });
+  }
+
   // Subscriptions
   axios.get(`${apiBaseURL}/subscriptions/list`)
     .then(({ data }) => {
@@ -47,13 +54,13 @@ function initPage() {
       console.error(err)
     })
 
-  // Slider
-  const slider = tns({
+  // TODO: Slider
+  /*const slider = tns({
     container: '.my-slider',
     items: 1,
     slideBy: 'page',
     autoplay: true
-  });
+  });*/
 
   // Animations
   const animations = [];
@@ -75,8 +82,6 @@ function initPage() {
     const scrollPercent = window.pageYOffset - div.offsetTop;
     return (scrollPercent + offset) / speed;
   };
-
-  const introductionSection = document.querySelector(".section__introduction");
 
   makeAnimation({
     targets: '.introduction__img',
