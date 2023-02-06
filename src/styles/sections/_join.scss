@@ -19,6 +19,11 @@
       width: 100%;
       height: 80vh;
       max-height: 80vh;
+
+      @media screen and (max-width: 550px) {
+        padding-left: 2rem;
+        padding-bottom: 2rem;
+      }
     }
 
     &__title,
@@ -28,10 +33,18 @@
 
     &__title {
       font-size: 5rem;
+
+      @media screen and (max-width: 550px) {
+        font-size: 2.7rem;
+      }
     }
 
     &__subtitle {
       font-size: 2.5rem;
+
+      @media screen and (max-width: 550px) {
+        font-size: 1.7rem;
+      }
     }
 
     &__button {

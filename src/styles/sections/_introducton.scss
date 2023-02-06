@@ -9,6 +9,12 @@
     background: #212128;
     color: #fff;
 
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 6rem;
+    }
+
     &__title {
       font-size: 5rem;
       line-height: 1;
@@ -22,6 +28,10 @@
 
     &__img {
       width: 35vw;
+
+      @media screen and (max-width: 550px) {
+        width: 80vw;
+      }
     }
 
     &__socials {
@@ -36,6 +46,13 @@
       list-style: none;
 
       font-size: 3rem;
+
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+
+        font-size: 2rem;
+      }
 
       .social {
         &__link {

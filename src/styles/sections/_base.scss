@@ -3,5 +3,12 @@
     height: 100vh;
 
     padding: 5rem;
+
+    @media screen and (max-width: 550px) {
+      min-height: 100vh;
+      height: auto;
+
+      padding: 5rem 2rem;
+    }
   }
 }

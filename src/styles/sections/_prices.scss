@@ -11,6 +11,10 @@
 
     &__title {
       font-size: 5rem;
+
+      @media screen and (max-width: 768px) {
+        text-align: center;
+      }
     }
 
     &__subtitle {
@@ -24,7 +28,7 @@
     &__variants {
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
+      align-items: center;
       gap: 8rem;
 
       width: 100%;
@@ -32,6 +36,16 @@
       margin-top: 2rem;
 
       list-style: none;
+
+      @media screen and (max-width: 1024px) {
+        gap: 3rem;
+      }
+
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
 
       .variant {
         display: flex;
@@ -48,6 +62,10 @@
         box-shadow: 5px 5px 5px 0 rgba(#da431a, 0.08);
 
         transition: all .4s;
+
+        @media screen and (max-width: 768px) {
+          width: 80%;
+        }
 
         &:hover {
           transform: translateY(-15px) scale(1.04) !important;
