@@ -12,7 +12,6 @@ function initPage() {
   axios.get(`${apiBaseURL}/subscriptions/list`)
     .then(({ data }) => {
       const subscriptions = data.filter((item) => item.price > 0);
-      console.log('subscriptions', subscriptions)
 
       const variants = document.querySelectorAll('.variant');
       variants.forEach((variant, index) => {
@@ -24,7 +23,7 @@ function initPage() {
         if (!subscription) {
           console.error('not found subscription', index, subscriptions, subscriptions[index])
         }
-        console.log('index', index)
+
         const title = variant.querySelector('.variant__title');
         title.textContent = subscription.name;
 
@@ -129,6 +128,46 @@ function initPage() {
     duration: 5000,
     easing: 'easeInOutExpo',
   }, featuresSection, 650, 500);
+
+  // Pricing
+
+  const pricingSection = document.querySelector(".section__features");
+
+  makeAnimation({
+    targets: '.prices__title',
+    opacity: 1,
+    translateX: 0,
+    translateY: 0,
+    duration: 5000,
+    easing: 'easeInOutExpo',
+  }, pricingSection, 1300, 100);
+
+  makeAnimation({
+    targets: '.variant_left',
+    opacity: 1,
+    translateX: 0,
+    translateY: 0,
+    duration: 5000,
+    easing: 'easeInOutExpo',
+  }, pricingSection, 800, 100);
+
+  makeAnimation({
+    targets: '.variant_center',
+    opacity: 1,
+    translateX: 0,
+    translateY: 0,
+    duration: 5000,
+    easing: 'easeInOutExpo',
+  }, pricingSection, 800, 100);
+
+  makeAnimation({
+    targets: '.variant_right',
+    opacity: 1,
+    translateX: 0,
+    translateY: 0,
+    duration: 5000,
+    easing: 'easeInOutExpo',
+  }, pricingSection, 800, 100);
 
   window.onscroll = function () {
     animations.forEach((animation) => {

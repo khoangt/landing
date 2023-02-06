@@ -50,7 +50,7 @@
         transition: all .4s;
 
         &:hover {
-          transform: translateY(-15px) scale(1.04);
+          transform: translateY(-15px) scale(1.04) !important;
 
           border-color: darken(#da431a, 5%);
 
