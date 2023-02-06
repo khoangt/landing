@@ -11,7 +11,38 @@ function initPage() {
   // Subscriptions
   axios.get(`${apiBaseURL}/subscriptions/list`)
     .then(({ data }) => {
-      console.log('results', data)
+      const subscriptions = data.filter((item) => item.price > 0);
+      console.log('subscriptions', subscriptions)
+
+      const variants = document.querySelectorAll('.variant');
+      variants.forEach((variant, index) => {
+        variant.addEventListener('click', () => {
+          window.open('https://lk.browser-profiles.com/auth/sign-up', '_blank');
+        });
+
+        const subscription = subscriptions[index];
+        if (!subscription) {
+          console.error('not found subscription', index, subscriptions, subscriptions[index])
+        }
+        console.log('index', index)
+        const title = variant.querySelector('.variant__title');
+        title.textContent = subscription.name;
+
+        const priceValue = variant.querySelector('.price__value');
+        priceValue.textContent = `${subscription.price}$ / месяц`;
+
+        const profilesCount = variant.querySelector('.privileges__item_profiles');
+        profilesCount.textContent = `До ${subscription.maxProfiles} браузерных профилей`;
+
+        const support = variant.querySelector('.privileges__item_support');
+        if (subscription.maxProfiles > 25) {
+          support.textContent = `Приоритетная поддержка`;
+        } else if (subscription.maxProfiles > 3) {
+          support.textContent = `Базовая поддержка`;
+        } else {
+          support.textContent = '';
+        }
+      });
     })
     .catch((err) => {
       console.error(err)
