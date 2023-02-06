@@ -1,9 +1,31 @@
 import './styles/main.scss';
 import anime from 'animejs/lib/anime.es.js';
+import { tns } from 'tiny-slider/src/tiny-slider';
+import axios from 'axios';
 
 document.addEventListener('DOMContentLoaded', initPage);
 
+const apiBaseURL = 'http://localhost:3005/api/v1';
+
 function initPage() {
+  // Subscriptions
+  axios.get(`${apiBaseURL}/subscriptions/list`)
+    .then(({ data }) => {
+      console.log('results', data)
+    })
+    .catch((err) => {
+      console.error(err)
+    })
+
+  // Slider
+  const slider = tns({
+    container: '.my-slider',
+    items: 1,
+    slideBy: 'page',
+    autoplay: true
+  });
+
+  // Animations
   const animations = [];
 
   const makeAnimation = (props, section, speed, offset) => {
@@ -61,7 +83,7 @@ function initPage() {
 
   const featuresSection = document.querySelector(".section__features");
 
-  makeAnimation({
+  /*makeAnimation({
     targets: '.lines__left',
     opacity: 1,
     translateY: 0,
@@ -75,7 +97,7 @@ function initPage() {
     translateY: 0,
     duration: 2000,
     easing: 'easeInOutExpo',
-  }, featuresSection, 500, 350);
+  }, featuresSection, 500, 350);*/
 
   window.onscroll = function () {
     animations.forEach((animation) => {
