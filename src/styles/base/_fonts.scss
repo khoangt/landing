@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;700&display=swap');
+
+html {
+  font-size: 62.5%;
+
+  @media screen and (max-width: 550px) {
+    font-size: 55%;
+  }
+}
+
+body {
+  font-family: 'Source Code Pro', monospace;
+}
+
+button {
+  font-family: 'Source Code Pro', monospace;
+}
