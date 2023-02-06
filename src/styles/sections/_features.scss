@@ -49,17 +49,25 @@
     }
 
     &__content {
+      z-index: 2;
+
       align-self: flex-start;
 
       color: #fff;
     }
 
+    &__title,
+    &__list {
+      text-align: right;
+    }
+
     &__title {
+      margin-bottom: 2rem;
+
       font-size: 5rem;
     }
 
     &__list {
-      text-align: right;
       list-style: none inside none;
       font-size: 2rem;
       line-height: 1;
@@ -68,7 +76,21 @@
     .features {
       &__item {
         &:not(:last-of-type) {
-          margin-bottom: 1rem;
+          margin-bottom: 13%;
+        }
+
+        &:nth-child(even) {
+          text-align: left;
+        }
+
+        .feature-main {
+          font-size: 2.5rem;
+        }
+
+        .feature-description {
+          opacity: 0.7;
+
+          font-size: 1.8rem;
         }
       }
     }

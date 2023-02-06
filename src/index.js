@@ -83,21 +83,21 @@ function initPage() {
 
   const featuresSection = document.querySelector(".section__features");
 
-  /*makeAnimation({
-    targets: '.lines__left',
+  makeAnimation({
+    targets: '.features__title',
     opacity: 1,
-    translateY: 0,
-    duration: 2000,
+    translateX: 0,
+    duration: 5000,
     easing: 'easeInOutExpo',
-  }, featuresSection, 500, 350);
+  }, featuresSection, 650, 500);
 
   makeAnimation({
-    targets: '.lines__right',
+    targets: '.feature',
     opacity: 1,
-    translateY: 0,
-    duration: 2000,
+    translateX: 0,
+    duration: 5000,
     easing: 'easeInOutExpo',
-  }, featuresSection, 500, 350);*/
+  }, featuresSection, 650, 500);
 
   window.onscroll = function () {
     animations.forEach((animation) => {
