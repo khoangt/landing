@@ -5,7 +5,7 @@ import axios from 'axios';
 
 document.addEventListener('DOMContentLoaded', initPage);
 
-const apiBaseURL = 'http://localhost:3005/api/v1';
+const apiBaseURL = 'https://api.browser-profiles.com/api/v1';
 
 function initPage() {
   const joinButton = document.querySelector('.join__button');
@@ -28,7 +28,7 @@ function initPage() {
 
         const subscription = subscriptions[index];
         if (!subscription) {
-          console.error('not found subscription', index, subscriptions, subscriptions[index])
+          console.error('not found subscription');
         }
 
         const title = variant.querySelector('.variant__title');
