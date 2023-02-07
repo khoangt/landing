@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack --config webpack.config.prod.js",
     "serve": "webpack serve --open",
     "serve:public": "webpack serve --host 0.0.0.0",
     "lint": "eslint src/index.js"
