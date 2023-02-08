@@ -26,5 +26,11 @@
     &-inner {
       color: rgba(#fff, 0.6);
     }
+
+    &_fk {
+      img {
+        height: 30px;
+      }
+    }
   }
 }
