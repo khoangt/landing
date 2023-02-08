@@ -1,0 +1,30 @@
+.footer {
+  padding: 2rem 3rem;
+
+  background-color: #282b30;
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    list-style: none;
+
+    font-size: 1.3rem;
+
+    @media screen and (max-width: 500px) {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__link {
+    &:hover {
+      cursor: pointer;
+    }
+
+    &-inner {
+      color: rgba(#fff, 0.6);
+    }
+  }
+}
