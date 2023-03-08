@@ -8,7 +8,7 @@
     <meta name="yandex-verification" content="c6e5ebc76c7dc222" />
     <meta name="description" content="Быстро создавайте виртуальные браузерные профили, каждый из которых обладает уникальными отпечатками и определяется как другое устройство">
     <title>Браузерные профили</title>
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.min.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css" integrity="sha512-eMxdaSf5XW3ZW1wZCrWItO2jZ7A9FhuZfjVdztr7ZsKNOmt6TUMTQgfpNoVRyfPE5S9BC0A4suXzsGSrAOWcoQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <div class="main">
@@ -125,18 +125,27 @@
       </section>
 
       <section class="section section__join join">
+        <div class="join__carousel">
+          <div class="carousel-slider">
+            <div class="slide">
+              <img class="slide__img" src="assets/img/screens/1.png" alt="" draggable="false">
+            </div>
+            <div class="slide">
+              <img class="slide__img" src="assets/img/screens/2.png" alt="" draggable="false">
+            </div>
+            <div class="slide">
+              <img class="slide__img" src="assets/img/screens/3.png" alt="" draggable="false">
+            </div>
+            <div class="slide">
+              <img class="slide__img" src="assets/img/screens/4.png" alt="" draggable="false">
+            </div>
+          </div>
+        </div>
+
         <h2 class="join__title">Попробовать можно бесплатно</h2>
         <h3 class="join__subtitle">Тестовый период 1 месяц</h3>
 
         <button class="join__button">Создать аккаунт</button>
-
-        <!--<div class="join__carousel">
-          <div class="my-slider">
-            <div>1111</div>
-            <div>2222</div>
-            <div>3333</div>
-          </div>
-        </div>-->
       </section>
     </div>
 
@@ -164,7 +173,23 @@
       </ul>
     </footer>
 
-    <script type="text/javascript" >
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script>
+      //// CAROUSEL ////
+      tns({
+        container: '.carousel-slider',
+        items: 1,
+        slideBy: 'page',
+        autoplay: true,
+        center: true,
+        mode: "gallery",
+        animateIn: "jello",
+        animateOut: "rollOut",
+        speed: 1000,
+        autoplayTimeout: 4000
+      });
+    </script>
+    <script type="text/javascript">
       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
         m[i].l=1*new Date();
         for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}

@@ -1,6 +1,5 @@
 import './styles/main.scss';
 import anime from 'animejs/lib/anime.es.js';
-import { tns } from 'tiny-slider/src/tiny-slider';
 import axios from 'axios';
 
 document.addEventListener('DOMContentLoaded', initPage);
