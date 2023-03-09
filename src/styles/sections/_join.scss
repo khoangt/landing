@@ -26,12 +26,44 @@
       }
     }
 
+    &__carousel {
+      .tns-controls,
+      .tns-nav,
+      button {
+        display: none;
+      }
+
+      .slide {
+        max-width: 80%;
+
+        @keyframes topupphoto {
+          0% { transform: translateY(0) translateX(0) rotate(-1deg) skew(1deg) }
+          50% { transform: translateY(10px) translateX(-3px) rotate(-1deg) skew(1deg) }
+          100% { transform: translateY(0) translateX(0) rotate(-1deg) skew(1deg) }
+        }
+
+        .slide__img {
+          max-height: 500px;
+          max-width: 95vw;
+
+          margin: 20px 0;
+
+          border-radius: 10px;
+
+          animation: topupphoto 4s 0s infinite;
+          box-shadow: -31px 43px 30px 0px rgba(255, 255, 255, 0.05);
+        }
+      }
+    }
+
     &__title,
     &__subtitle {
       text-align: center;
     }
 
     &__title {
+      margin-top: 2rem;
+
       font-size: 5rem;
 
       @media screen and (max-width: 550px) {

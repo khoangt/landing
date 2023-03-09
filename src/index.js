@@ -1,6 +1,5 @@
 import './styles/main.scss';
 import anime from 'animejs/lib/anime.es.js';
-import { tns } from 'tiny-slider/src/tiny-slider';
 import axios from 'axios';
 
 document.addEventListener('DOMContentLoaded', initPage);
@@ -101,7 +100,7 @@ function initPage() {
   makeAnimation({
     targets: '.introduction__subtitle',
     opacity: 1,
-    translateX: 30,
+    translateX: window.innerWidth > 768 ? 30 : 10,
     duration: 1500,
     easing: 'easeInOutExpo'
   });
