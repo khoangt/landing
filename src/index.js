@@ -100,7 +100,7 @@ function initPage() {
   makeAnimation({
     targets: '.introduction__subtitle',
     opacity: 1,
-    translateX: 30,
+    translateX: window.innerWidth > 768 ? 30 : 10,
     duration: 1500,
     easing: 'easeInOutExpo'
   });

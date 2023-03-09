@@ -84,10 +84,10 @@
     .features {
       &__item {
         &:not(:last-of-type) {
-          margin-bottom: 13%;
+          margin-bottom: 15%;
         }
 
-        &:nth-child(even) {
+        &:nth-child(odd) {
           text-align: left;
         }
 
